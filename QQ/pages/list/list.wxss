@@ -1,0 +1,93 @@
+page{
+  font: 12px/1.5 'hiragino sans gb', arial;
+  color: #555;
+  background: #f4f4f4;
+}
+
+view{
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.content{
+  margin: 10px;
+}
+
+.item{
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.main{
+  /* 自适应布局webkit-box的用法 */
+  display: -webkit-box;
+  background: #fff;
+}
+
+.main .left{
+  position: relative;
+  width: 100px;
+  height: 100pxl;
+  display: block;
+}
+
+.left image{
+  display: block;
+  width: 100px;
+  height: 100px;
+  color: #ccc;
+  border: 0;
+}
+
+.title{
+  font-size: 16px;
+  color: #000;
+  font-weight: normal;
+  margin-bottom: 5px;
+}
+
+.right{
+  position: relative;
+  /* 一比一*/
+  -webkit-box-flex: 1;
+  /* 自适应布局webkit-box的用法 */
+  display: -webkit-box;
+  /* 居中显示*/
+  -webkit-box-align: center;
+  /* 水平对齐方式 */
+  -webkit-box-pack: center;
+}
+
+.right .info{
+  /* 兄弟元素之间比例，仅作一个系数 */
+  -webkit-box-flex: 1;
+  margin: 0 10px 0 15px;
+}
+
+.order{
+  font-size: 14px;
+  color: rgba(0, 0, 0, .5);
+}
+
+.songname{
+  color: #000;
+  margin-left: 8px;
+  margin-right: 5px;
+  /* 默认。此元素会被显示为内联元素，元素前后没有换行符 */
+  display: inline;
+}
+
+/* 代码写三角符号样式 */
+.sign{
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  margin-top: -4px;
+  width: 6px;
+  height: 6px;
+  border-right: 1px solid #b2b2b2;
+  border-bottom: 1px solid #b2b2b2;
+  /* Safari Opera and Chrome 逆时针旋转45° */ 
+  -webkit-transform: rotate(-45deg);
+}

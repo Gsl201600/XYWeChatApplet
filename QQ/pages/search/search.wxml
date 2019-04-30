@@ -1,0 +1,49 @@
+<view class='box' wx:if='{{showToast}}'>
+  <view class='window'>
+    <view class='text'>
+      {{toastText}}
+    </view>
+  </view>
+</view>
+
+<view class='container'>
+  <view class='search'>
+    <form>
+      <input bindfocus='focus' bindconfirm='confirm' bindinput='input' placeholder='搜索歌曲、歌单、专辑' placeholder-class='placeholder' confirm-type='search'>
+        <image src='../../img/search.png'></image>
+      </input>
+      <button bindtap='reset' class='resetBtn' form-type='reset' hidden='{{!restBtn}}'>x</button>
+    </form>
+  </view>
+
+  <view class='music-body'>
+    <!-- 历史 -->
+    <view hidden='{{!flag}}'>
+      <view>
+        <block wx:for='{{history}}' wx:key='u'>
+          <view class='history-item'>
+            <image src='../../img/historyLogo.png'></image>
+            <view class='title'>{{item}}</view>
+            <view id='{{index}}' bindtap='delete' class='delete'>x</view>
+          </view>
+        </block>
+      </view>
+
+      <view bindtap='clear' class='clearHistory' hidden='{{!history[0]}}'>
+        清除搜索记录
+      </view>
+    </view>
+
+    <!-- 歌曲 -->
+    <view class='content'>
+      <view class='content-item' wx:for='{{data}}' wx:key='u'>
+        <image class='item-left' src='{{item.albumpic_small}}'></image>
+        <view class='item-right'>
+          <view class='title'>{{item.singername}}</view>
+          <view class='signer'>{{item.songname}}</view>
+        </view>
+      </view>
+    </view>
+  
+  </view>
+</view>

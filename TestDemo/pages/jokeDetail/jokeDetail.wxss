@@ -1,0 +1,24 @@
+.content{
+  margin: 20rpx;
+  letter-spacing: 2px;
+  text-align: justify;
+}
+.title{
+  text-align: center;
+  font-size: 16px;
+  line-height: 80rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.text{
+  text-indent: 2em;
+  font-size: 14px;
+  color: #333;
+}
+.time{
+  text-align: right;
+  font-size: 14px;
+  color: #ccc;
+  margin-top: 10rpx;
+}

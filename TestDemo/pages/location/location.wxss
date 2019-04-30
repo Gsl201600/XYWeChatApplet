@@ -1,0 +1,8 @@
+scroll-view{
+  height: 500rpx;
+  width: 500rpx;
+}
+view{
+  height: 300rpx;
+  width: 300rpx;
+}

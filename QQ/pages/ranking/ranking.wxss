@@ -1,0 +1,96 @@
+page{
+  color: #777;
+  font: 300 12px/1.5 sans-serif;
+}
+
+image{
+  /* 垂直对齐 */
+  vertical-align: middle;
+  width: 750rpx;
+}
+
+.box{
+  position: relative;
+  /* 自适应布局webkit-box的用法 */
+  display: -webkit-box;
+  /* 居中对齐 */
+  -webkit-box-align: center;
+  height: 54px;
+  margin: 0 16px -10px;
+}
+
+.box view{
+  font-size: 14px;
+}
+
+.box view text{
+  margin-left: 5px;
+}
+
+.conten{
+  overflow: hidden;
+}
+
+.item{
+  position: relative;
+  display: -webkit-box;
+  border-bottom: 1px solid #f4f4f4;
+}
+
+.left{
+/* -webkit-box-orient(父):horizontal在水平行中从左向右排列子元素；vertical从上向下垂直排列子元素。
+-webkit-box-pack(父):start水平居左对齐；end水平居右对齐；center水平居中；justify两端对齐。
+-webkit-box-align(父):start居顶对齐；end居底对齐；center垂直居中；stretch拉伸到与父容器等高。
+-webkit-box-flex(子):用来让子容器针对父容器的宽度按一定规则进行划分。 */
+  /* 自适应布局webkit-box的用法 */
+  display: -webkit-box;
+  /* 从上向下垂直排列子元素 */
+  -webkit-box-orient: vertical;
+  /* 水平居中对齐 */
+  -webkit-box-pack: center;
+  /* 垂直居中排列 */
+  -webkit-box-align: center;
+  width: 45px;
+  margin-right: -16px;
+}
+
+.color{
+  color: #ff400b;
+}
+
+.right{
+  position: relative;
+  -webkit-box-flex: 1;
+  display: -webkit-box;
+  -webkit-box-align: center;
+  padding: 10px 16px;
+  overflow: hidden;
+}
+
+.music{
+  -webkit-box-flex: 1;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+
+.songname{
+  font-size: 16px;
+  color: #000;
+  display: -webkit-box;
+  -webkit-box-align: center;
+  overflow: hidden;
+}
+
+.songname text, .singername text{
+  display: block;
+  max-width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.singername{
+  display: -webkit-box;
+  -webkit-box-align: center;
+  overflow: hidden;
+}

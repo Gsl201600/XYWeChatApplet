@@ -1,0 +1,9 @@
+<view>
+  <swiper autoplay='true' interval='{{interval}}' duration='{{duration}}' indicator-dots='true' indicator-active-color='{{activeColor}}'>
+    <block wx:for='{{swiperImg}}' wx:key='u'>
+      <swiper-item>
+        <image src='{{item}}'></image>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
